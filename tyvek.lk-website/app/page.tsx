@@ -133,6 +133,63 @@ export default function HomePage() {
         </div>
       </motion.section>
 
+      {/* --- Smart Gate System Section --- */}
+      <section 
+        className="py-20 bg-black" 
+        aria-labelledby="smart-gate-heading"
+      >
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Text Column */}
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ staggerChildren: 0.2 }}
+              className="text-center md:text-left"
+            >
+              <motion.h2 
+                variants={fadeIn} 
+                id="smart-gate-heading" 
+                className="text-3xl font-bold text-white mb-4"
+              >
+                Smart Gate Systems
+              </motion.h2>
+              <motion.p 
+                variants={fadeIn} 
+                className="text-gray-400 mb-8 leading-relaxed"
+              >
+                Introducing Sri Lanka&apos;s first QR-based Event Smart Gate System, provided by Tyvek.lk. This cutting-edge system features real-time tracking, passes management, and an anti-passback feature, ensuring secure, efficient access control at events.
+              </motion.p>
+              <motion.div variants={fadeIn}>
+                <Link 
+                  href="/demo" // Change this link to your contact or demo page
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+                >
+                  Book a Demo <ArrowRight className="w-5 h-5" />
+                </Link>
+              </motion.div>
+            </motion.div>
+
+             {/* Image Column */}
+            <motion.div 
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              <Image 
+                src="/smartgate.png" // IMPORTANT: Make sure this image is in your /public folder
+                alt="Smart Gate System for Events" 
+                width={250} 
+                height={250} 
+                className="rounded-lg shadow-2xl shadow-blue-500/10 mx-auto"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* --- Product Showcase Section --- */}
       <section className="bg-black py-20 overflow-x-hidden" aria-labelledby="showcase-heading">
         <div className="container mx-auto px-4">
